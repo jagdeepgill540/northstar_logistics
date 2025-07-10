@@ -12,14 +12,14 @@ const TopBarArea = () => {
                 <li className="d-none d-lg-inline-block">
                   <span>
                     <Phone />
-                    <a href="tel:008757845682">(91) 187 047 5767</a>
+                    <a href="tel:0478800028">0478 800 028</a>
                   </span>
                 </li>
                 <li>
                   <span>
                     <i className="fa-light fa-envelope-open-text"></i>
                     <a href="mailto:mcssainfo@gmail.com">
-                      Northstarinfo@gmail.com
+                    operations@northstarlogistics.com.au
                     </a>
                   </span>
                 </li>
@@ -30,7 +30,7 @@ const TopBarArea = () => {
                       target="_blank"
                       href="https://www.google.com/maps/@23.843848,90.3081992,17.5z?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D"
                     >
-                      238, Arimantab, Moska - USA.
+                      73 Pipe Road, Laverton North VIC 3026.
                     </a>
                   </span>
                 </li>

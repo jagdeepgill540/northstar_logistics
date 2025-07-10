@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"layouts\\\\wrapper.tsx -> wowjs":{"id":29605,"files":["static/chunks/9605.50d308afa488b9dc.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{\"layouts\\\\wrapper.tsx -> wowjs\":{\"id\":\"layouts\\\\wrapper.tsx -> wowjs\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_wowjs_dist_wow_js.js\"]}}"

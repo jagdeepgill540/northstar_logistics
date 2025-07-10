@@ -36,8 +36,8 @@ const DetailsSidebar = () => {
           Looking for logistics service Provider?
         </h4>
         <span>Call Anytime</span>
-        <a className="it-btn-orange hover-2 w-100" href="tel:+911234568970">
-          <span>+(91)1234 568 970</span>
+        <a className="it-btn-orange hover-2 w-100" href="tel:0478800028">
+          <span>0478 800 028</span>
         </a>
       </div>
       <div className="sidebar-widget">
