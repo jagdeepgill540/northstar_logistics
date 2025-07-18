@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import InformationForm from '../form/information-form';
+import ContactFormThree from '../form/contact-form-three';
 
 interface IProps {
   itemClass?: string;
@@ -13,7 +14,9 @@ const InformationTab = ({
   itemRightClass,
   isThemeColor,
 }: IProps) => {
-  const tabNames = ['Request a Quote', 'Packages Tracking'];
+  const tabNames = ['Book a Service',
+     'Contact us'
+  ];
 
   return (
     <Tabs>
@@ -39,13 +42,21 @@ const InformationTab = ({
                   <div className="row">
                     <div className="col-xl-8 col-lg-7">
                       <div className="it-information-left">
-                        <InformationForm
-                          btnClass={
+                        {i === 0 ? (
+                          <InformationForm
+                            btnClass={
+                              isThemeColor
+                                ? 'it-btn-orange hover-2 w-100'
+                                : 'it-btn-orange w-100'
+                            }
+                          />
+                        ) : (
+                          <ContactFormThree inputClass="it-information-input-box" btnClass={
                             isThemeColor
                               ? 'it-btn-orange hover-2 w-100'
                               : 'it-btn-orange w-100'
-                          }
-                        />
+                          } />
+                        )}
                       </div>
                     </div>
                     <div className="col-xl-4 col-lg-5">

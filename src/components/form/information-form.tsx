@@ -4,53 +4,40 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import ErrorMsg from '../error-msg';
+import React from 'react';
 
 interface IProps {
   btnClass?: string;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  freightType: string;
-  freightType2: string;
-  departureCity: string;
-  deliveryCity: string;
-  weight: string;
-  weight2: string;
-  height: string;
-  height2: string;
-  options: string[];
+// Booking interface fields
+interface BookingFormData {
+  timeStart: string; // ISO string for input type="datetime-local"
+  timeEnd: string;
+  fullName: string;
+  mobile: string;
+  pickUpFrom: string;
+  dropOffLocation: string;
+  orderNo: string;
+  contactDetails: string;
+  loadType: string;
+  specialRequirements: string;
 }
 
-// Create a validation schema using yup
 const schema = yup.object({
-  name: yup.string().required('Name is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
-  phone: yup.string().required('Phone Number is required'),
-  freightType: yup.string().required('Freight Type is required'),
-  freightType2: yup.string().required('Freight Type is required'),
-  departureCity: yup.string().required('City of Departure is required'),
-  deliveryCity: yup.string().required('Delivery City is required'),
-  weight: yup.string().required('Weight is required'),
-  weight2: yup.string().required('Weight is required'),
-  height: yup.string().required('Height is required'),
-  height2: yup.string().required('Height is required'),
-  options: yup
-    .array(yup.string().required())
-    .min(1, 'Select at least one option')
-    .required(),
+  timeStart: yup.string().required('Start time is required'),
+  timeEnd: yup.string().required('End time is required'),
+  fullName: yup.string().required('Full name is required'),
+  mobile: yup.string().required('Mobile is required'),
+  pickUpFrom: yup.string().required('Pick up location is required'),
+  dropOffLocation: yup.string().required('Drop off location is required'),
+  orderNo: yup.string().required('Order number is required'),
+  contactDetails: yup.string().required('Contact details are required'),
+  loadType: yup.string().required('Load type is required'),
+  specialRequirements: yup.string().required('Special requirements are required'),
 });
 
-// Check Box Data
-const checkBoxData = [
-  'Camera',
-  'Packaging',
-  'Express Delivery',
-  'Road Freight',
-  'Air Freight',
-];
+const API_BASE_URL = 'https://backend.northstarlogistics.com.au';
 
 export default function InformationForm({ btnClass }: IProps) {
   const {
@@ -58,140 +45,122 @@ export default function InformationForm({ btnClass }: IProps) {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormData>({
+  } = useForm<BookingFormData>({
     resolver: yupResolver(schema),
-    defaultValues: {
-      options: [], // Ensuring it's an empty array by default
-    },
   });
 
-  const onSubmit = handleSubmit((data: FormData) => {
-    alert(JSON.stringify(data));
-    reset();
+  const [loading, setLoading] = React.useState(false);
+  const [success, setSuccess] = React.useState('');
+  const [error, setError] = React.useState('');
+
+  const onSubmit = handleSubmit(async (data: BookingFormData) => {
+    setLoading(true);
+    setSuccess('');
+    setError('');
+    try {
+      // Convert time fields to Date if needed by backend, else send as string
+      const response = await fetch(`${API_BASE_URL}/booking/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...data,
+          timeStart: new Date(data.timeStart),
+          timeEnd: new Date(data.timeEnd),
+        }),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to submit booking');
+      }
+      setSuccess('Booking submitted successfully!');
+      reset();
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong.');
+    } finally {
+      setLoading(false);
+    }
   });
 
   return (
     <form onSubmit={onSubmit}>
+      {/* Success/Error Messages */}
+      {success && <div className="alert alert-success mb-3">{success}</div>}
+      {error && <div className="alert alert-danger mb-3">{error}</div>}
       <div className="row gx-20">
-        <div className="col-lg-4 col-md-4">
+        <div className="col-lg-6 col-md-6">
           <div className="it-information-input-box mb-20">
-            <input type="text" placeholder="Your Name" {...register('name')} />
-            <ErrorMsg msg={errors.name?.message || ''} />
+            <label>Start Time</label>
+            <input type="datetime-local" {...register('timeStart')} />
+            <ErrorMsg msg={errors.timeStart?.message || ''} />
           </div>
         </div>
-        <div className="col-lg-4 col-md-4">
+        <div className="col-lg-6 col-md-6">
           <div className="it-information-input-box mb-20">
-            <input
-              type="email"
-              placeholder="Your Email"
-              {...register('email')}
-            />
-            <ErrorMsg msg={errors.name?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-4">
-          <div className="it-information-input-box mb-20">
-            <input
-              type="text"
-              placeholder="Phone Number"
-              {...register('phone')}
-            />
-            <ErrorMsg msg={errors.phone?.message || ''} />
-          </div>
-        </div>
-      </div>
-      <span className="mt-15 mb-25 d-block">Shipment Information</span>
-      <div className="row gx-20">
-        <div className="col-lg-4 col-md-4">
-          <div className="it-information-input-box mb-20">
-            <input
-              type="text"
-              placeholder="Freight Type"
-              {...register('freightType')}
-            />
-            <ErrorMsg msg={errors.freightType?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-4">
-          <div className="it-information-input-box mb-20">
-            <input
-              type="text"
-              placeholder="City of Departure"
-              {...register('departureCity')}
-            />
-            <ErrorMsg msg={errors.departureCity?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-4">
-          <div className="it-information-input-box mb-20">
-            <input
-              type="text"
-              placeholder="Delivery City"
-              {...register('deliveryCity')}
-            />
-            <ErrorMsg msg={errors.deliveryCity?.message || ''} />
+            <label>End Time</label>
+            <input type="datetime-local" {...register('timeEnd')} />
+            <ErrorMsg msg={errors.timeEnd?.message || ''} />
           </div>
         </div>
       </div>
       <div className="row gx-20">
-        <div className="col-lg-4 col-md-4">
+        <div className="col-lg-6 col-md-6">
           <div className="it-information-input-box mb-20">
-            <input
-              type="text"
-              placeholder="Freight Type"
-              {...register('freightType2')}
-            />
-            <ErrorMsg msg={errors.freightType2?.message || ''} />
+            <input type="text" placeholder="Full Name" {...register('fullName')} />
+            <ErrorMsg msg={errors.fullName?.message || ''} />
           </div>
         </div>
-        <div className="col-lg-2 col-md-2 col-6">
+        <div className="col-lg-6 col-md-6">
           <div className="it-information-input-box mb-20">
-            <input type="text" placeholder="Weight" {...register('weight')} />
-            <ErrorMsg msg={errors.weight?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-2 col-6">
-          <div className="it-information-input-box mb-20">
-            <input type="text" placeholder="Height" {...register('height')} />
-            <ErrorMsg msg={errors.height?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-2 col-6">
-          <div className="it-information-input-box mb-20">
-            <input type="text" placeholder="Weight" {...register('weight2')} />
-            <ErrorMsg msg={errors.weight2?.message || ''} />
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-2 col-6">
-          <div className="it-information-input-box mb-20">
-            <input type="text" placeholder="Height" {...register('height2')} />
-            <ErrorMsg msg={errors.height2?.message || ''} />
+            <input type="text" placeholder="Mobile" {...register('mobile')} />
+            <ErrorMsg msg={errors.mobile?.message || ''} />
           </div>
         </div>
       </div>
-      <div className="it-information-check-box mb-30">
-        <ul>
-          {checkBoxData.map((item, i) => (
-            <li key={i}>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value={item}
-                  id={item}
-                  {...register('options')}
-                />
-                <label className="form-check-label" htmlFor={item}>
-                  {item}
-                </label>
-              </div>
-            </li>
-          ))}
-        </ul>
-        <ErrorMsg msg={errors.options?.message || ''} />
+      <div className="row gx-20">
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Pick Up From" {...register('pickUpFrom')} />
+            <ErrorMsg msg={errors.pickUpFrom?.message || ''} />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Drop Off Location" {...register('dropOffLocation')} />
+            <ErrorMsg msg={errors.dropOffLocation?.message || ''} />
+          </div>
+        </div>
       </div>
-      <button className={btnClass || 'it-btn-orange w-100'} type="submit">
-        <span>REQUST A QUOTE</span>
+      <div className="row gx-20">
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Order No" {...register('orderNo')} />
+            <ErrorMsg msg={errors.orderNo?.message || ''} />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Contact Details" {...register('contactDetails')} />
+            <ErrorMsg msg={errors.contactDetails?.message || ''} />
+          </div>
+        </div>
+      </div>
+      <div className="row gx-20">
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Load Type" {...register('loadType')} />
+            <ErrorMsg msg={errors.loadType?.message || ''} />
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6">
+          <div className="it-information-input-box mb-20">
+            <input type="text" placeholder="Special Requirements" {...register('specialRequirements')} />
+            <ErrorMsg msg={errors.specialRequirements?.message || ''} />
+          </div>
+        </div>
+      </div>
+      <button className={btnClass || 'it-btn-orange w-100'} type="submit" disabled={loading}>
+        <span>{loading ? 'Submitting...' : 'Book a Service'}</span>
       </button>
     </form>
   );

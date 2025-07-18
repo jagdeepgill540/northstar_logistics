@@ -60050,6 +60050,10 @@ a.ui-button:active {
   background-color: var(--it-gray-1);
 }
 
+.it-contact-textarea-box-white textarea {
+  background-color: var(--it-common-white);
+}
+
 .it-contact-item-icon {
   display: inline-block;
   height: 70px;
