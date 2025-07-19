@@ -15,7 +15,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  website: string;
+  website?: string;
   messages: string;
 }
 
@@ -66,8 +66,12 @@ const ContactFormThree = ({ btnClass,inputClass }: IProps) => {
       }
       setSuccess('Your message has been sent successfully!');
       reset();
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Something went wrong.');
+      }
     } finally {
       setLoading(false);
     }

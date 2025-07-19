@@ -7,6 +7,5 @@ import { RootState } from '../redux/rootReducer';
 
 // Custom hook for dispatching actions with the correct AppDispatch type
 export const useAppDispatch: () => AppDispatch = useDispatch;
-
 // Custom hook for selecting state from the store with the correct RootState type
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
