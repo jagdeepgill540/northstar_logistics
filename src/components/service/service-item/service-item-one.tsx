@@ -35,11 +35,12 @@ const ServiceItemOne = ({ service }: ServiceItemProps) => {
         <div className="col-lg-3 col-md-6">
           <div className="it-service-thumb p-relative">
             <Image
-              className="w-100 image-height-auto"
+              className="w-100"
               src={service.image || serviceImg}
               alt="service-img"
               width={303}
               height={150}
+              style={{ objectFit: 'cover', maxHeight: '675px' }}
             />
             <Link
               href={`/service-details/${service.id}`}

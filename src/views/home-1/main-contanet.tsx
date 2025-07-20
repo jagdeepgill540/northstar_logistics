@@ -7,7 +7,7 @@ import HeroBannerOne from '@/components/hero/hero-banner/hero-banner-one';
 import InformationOne from '@/components/information/information-one';
 import ServiceOne from '@/components/service/service-one';
 import TeamOne from '@/components/team/team-one';
-import TestimonialOne from '@/components/testimonial/testimonial-one';
+// import TestimonialOne from '@/components/testimonial/testimonial-one';
 import TextSliderOne from '@/components/text-slider/text-slider-one';
 
 const MainContent = () => {
@@ -21,7 +21,7 @@ const MainContent = () => {
       <FunFactOne />
       <InformationOne />
       <TeamOne />
-      <TestimonialOne />
+      {/* <TestimonialOne /> */}
       <BrandOne />
       <BlogOne />
     </main>

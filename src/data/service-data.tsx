@@ -1,9 +1,9 @@
 import { IServiceDT } from '@/types/service-d-t';
 
-import serviceImg1 from '@/assets/img/service/service-1-1.jpg';
-import serviceImg2 from '@/assets/img/service/service-1-2.jpg';
-import serviceImg3 from '@/assets/img/service/service-1-3.jpg';
-import serviceImg4 from '@/assets/img/service/service-1-4.jpg';
+import serviceImg1 from '@/assets/img/portfolio/long-move.jpg';
+import serviceImg2 from '@/assets/img/portfolio/International-move.jpg';
+import serviceImg3 from '@/assets/img/portfolio/Corporate-move.jpg';
+import serviceImg4 from '@/assets/img/portfolio/local-move.jpg';
 import serviceImg5 from '@/assets/img/service/service-5-1.jpg';
 import serviceDetailsImg from '@/assets/img/service/service-details.jpg';
 import {
@@ -18,7 +18,7 @@ import {
   ServiceIconTen,
   ServiceIconThree,
   // ServiceIconTwelve,
-  ServiceIconTwo,
+  // ServiceIconTwo,
 } from '@/components/svg';
 
 export const serviceDataOne: IServiceDT[] = [
@@ -55,7 +55,7 @@ export const serviceDataOne: IServiceDT[] = [
 export const serviceDataTwo: IServiceDT[] = [
   {
     id: 5,
-    icon: <ServiceIconOne />,
+    icon: <ServiceIconThree />,
     title: 'Biosecurity & Customs',
     description: `Expert handling of biosecurity regulations and customs clearance to ensure your shipments comply with all legal and safety requirements.`,
     descriptioninDetails: `Navigating biosecurity and customs regulations is a critical aspect of international logistics. Our team is dedicated to ensuring your shipments meet all compliance requirements, minimizing the risk of delays, fines, or product holds. We stay current with evolving regulations and proactively manage documentation, inspections, and clearances for your cargo.
@@ -68,7 +68,7 @@ With our comprehensive biosecurity and customs services, you gain peace of mind 
   },
   {
     id: 6,
-    icon: <ServiceIconTwo />,
+    icon: <ServiceIconThree />,
     title: 'Warehousing & Distribution',
     description: `Secure, modern warehousing and efficient distribution services to keep your supply chain running smoothly and your goods safe.`,
     descriptioninDetails: `Our warehousing and distribution solutions are designed to provide flexibility, security, and efficiency for businesses of all sizes. We operate state-of-the-art facilities equipped with advanced inventory management systems, ensuring your products are stored safely and tracked in real time. Our team handles everything from bulk storage to order fulfillment, adapting to your unique requirements.
@@ -136,7 +136,7 @@ With our experienced team and advanced equipment, you can trust us to protect yo
 export const serviceDataThree: IServiceDT[] = [
   {
     id: 13,
-    bgImage: '/assets/img/portfolio/portfolio-3-5.jpg',
+    bgImage: '/assets/img/portfolio/long-move.jpg',
     serviceCount: '01',
     title: 'Long Distance Moves',
     detailsImage: serviceDetailsImg,
@@ -144,7 +144,7 @@ export const serviceDataThree: IServiceDT[] = [
   },
   {
     id: 14,
-    bgImage: 'assets/img/portfolio/portfolio-3-2.jpg',
+    bgImage: 'assets/img/portfolio/International-move.jpg',
     serviceCount: '02',
     title: 'International Moves',
     detailsImage: serviceDetailsImg,
@@ -152,7 +152,7 @@ export const serviceDataThree: IServiceDT[] = [
   },
   {
     id: 15,
-    bgImage: '/assets/img/portfolio/portfolio-3-3.jpg',
+    bgImage: '/assets/img/portfolio/Corporate-move.jpg',
     serviceCount: '03',
     title: 'Corporate Moves',
     detailsImage: serviceDetailsImg,
@@ -160,7 +160,7 @@ export const serviceDataThree: IServiceDT[] = [
   },
   {
     id: 16,
-    bgImage: 'assets/img/portfolio/portfolio-3-4.jpg',
+    bgImage: 'assets/img/portfolio/local-move.jpg',
     serviceCount: '04',
     title: 'Local Moves in Town',
     detailsImage: serviceDetailsImg,
