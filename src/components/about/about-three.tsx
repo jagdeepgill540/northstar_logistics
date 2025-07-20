@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import AboutFunFactOne from './about-funfact/about-funfact-one';
 
 import shapeImg from '@/assets/img/shape/about-3.png';
-import aboutImg1 from '@/assets/img/about/about-3-1.jpg';
-import aboutImg2 from '@/assets/img/about/about-3-2.jpg';
+import aboutImg1 from '@/assets/img/about/white-semi-trailer-truck-port.jpg';
+import aboutImg2 from '@/assets/img/about/photorealistic-scene-with-warehouse-logistics-operations.jpg';
 
 const AboutThree = () => {
   return (
@@ -30,6 +30,7 @@ const AboutThree = () => {
               <Image
                 className="image-height-auto"
                 src={aboutImg1}
+                style={{ objectFit: 'cover', maxHeight: '675px' }}
                 alt="about-img"
                 width={515}
                 height={675}
@@ -54,18 +55,21 @@ const AboutThree = () => {
                     data-wow-delay=".5s"
                   >
                     <p className="mb-15">
-                      We are a global technology provider who assists businesses
-                      to accelerate their digital transformation journey while
-                      achieving efficiency, scalability, and lower cost of
-                      ownership.
+                      Northstar Logistics Group Pty Ltd is a proudly Australian-owned and
+                      operated transport and logistics company dedicated to delivering reliable,
+                      efficient, and safe freight solutions nationwide. Based in Australia,
+                      we specialise in container transport, warehousing, and logistics services
+                      that support importers, exporters, freight forwarders, and
+                      supply chain operators across key locations.
                     </p>
                     <p className="mb-30">
-                      Whatever your ambition may be from embracing new digital
-                      capabilities to reimagining how your business operates, we
-                      can help you set a new standard of excellence
+                      Our business is built on integrity, compliance, and a customer-first mindset. With an experienced team and
+                      a growing fleet, we are committed to offering tailored logistics solutions
+                      that meet the evolving needs of our clients in a fast-paced and
+                      demanding industry.
                     </p>
                   </div>
-                  <div
+                  {/* <div
                     className="it-fade-anim"
                     data-fade-from="top"
                     data-ease="bounce"
@@ -74,7 +78,7 @@ const AboutThree = () => {
                     <Link className="it-btn-black" href="/about">
                       <span>More About Us</span>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div

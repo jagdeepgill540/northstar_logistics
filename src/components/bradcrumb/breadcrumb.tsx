@@ -4,14 +4,15 @@ import Link from 'next/link';
 interface BreadcrumbProps {
   title: string;
   subtitle?: string;
+  backgroundImage?: string;
 }
 
-const Breadcrumb = ({ title, subtitle }: BreadcrumbProps) => {
+const Breadcrumb = ({ title, subtitle, backgroundImage }: BreadcrumbProps) => {
   return (
     <div
       className="it-breadcrumb-area it-breadcrumb-overlay it-breadcrumb-ptb z-index-1 fix p-relative"
       style={{
-        backgroundImage: `url('/assets/img/breadcrumb/breadcrumb.jpg')`,
+        backgroundImage: `url(${backgroundImage|| '/assets/img/breadcrumb/breadcrumb.jpg'})`,
       }}
     >
       <div className="container">

@@ -16,7 +16,7 @@ import AboutThree from '@/components/about/about-three';
 import ServiceTwo from '@/components/service/service-two';
 import TextSliderOne from '@/components/text-slider/text-slider-one';
 import StepOne from '@/components/step/step-one';
-import TestimonialOne from '@/components/testimonial/testimonial-one';
+// import TestimonialOne from '@/components/testimonial/testimonial-one';
 import ChooseThree from '@/components/choose/choose-three';
 
 const AboutMain = () => {
@@ -38,12 +38,12 @@ const AboutMain = () => {
       <Header />
 
       <main>
-        <Breadcrumb title="About Us" subtitle="About" />
+        <Breadcrumb title="About Us" subtitle="About" backgroundImage='/assets/img/about/about-us.jpg' />
         <AboutThree />
         <ServiceTwo />
         <TextSliderOne />
         <StepOne />
-        <TestimonialOne />
+        {/* <TestimonialOne /> */}
         <ChooseThree />
       </main>
 

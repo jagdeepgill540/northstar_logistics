@@ -38,7 +38,7 @@ const ServiceMain = () => {
       <Header />
 
       <main>
-        <Breadcrumb title="Services" />
+        <Breadcrumb title="Services" backgroundImage='/assets/img/service/photorealistic-scene-with-warehouse-logistics-operations.jpg' />
         <ServiceArea />
         <FunFactOne />
         <InformationOne />

@@ -24,7 +24,7 @@ const ContactMain = () => {
       <Header />
 
       <main>
-        <Breadcrumb title="Contact" />
+        <Breadcrumb title="Contact" backgroundImage='/assets/img/contact/contact-us.jpg' />
         <ContactArea />
         <MapArea />
       </main>

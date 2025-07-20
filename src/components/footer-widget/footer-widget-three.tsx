@@ -13,7 +13,7 @@ const FooterWidgetThree = () => {
           <a
             className="border-line-white"
             target="_blank"
-            href="https://www.google.com/maps/dir///@24.4503253,17.1644279,4.17z?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/place/73+Pipe+Rd,+Laverton+North+VIC+3026,+Australia/@-37.8233733,144.8041288,330m/data=!3m1!1e3!4m6!3m5!1s0x6ad661c871fc77d3:0xac72826b6190786b!8m2!3d-37.8234371!4d144.8055284!16s%2Fg%2F11csk3gl0h?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
           >
             NorthStar Logistics group
             73 Pipe Road, Laverton North VIC 3026

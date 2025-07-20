@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ChooseItemOne from './choose-item/choose-item-one';
 
-import chooseImg from '@/assets/img/choose/choose-3.jpg';
+import chooseImg from '@/assets/img/about/truck-logistics-operation-dusk.jpg';
 
 const ChooseThree = () => {
   return (
@@ -40,6 +40,7 @@ const ChooseThree = () => {
               <Image
                 className="image-height-auto"
                 src={chooseImg}
+                style={{ objectFit: 'cover', maxHeight:'554px' }}
                 alt="choose-img"
                 width={565}
                 height={554}
