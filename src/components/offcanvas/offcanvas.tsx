@@ -94,11 +94,11 @@ const OffCanvas = () => {
               <div className="itoffcanvas__info-address">
                 <span>Location</span>
                 <a
-                  href="https://www.google.com/maps/@37.4801311,22.8928877,3z"
+                  href="https://www.google.com/maps/place/5+Agosta+Dr,+Laverton+North+VIC+3026,+Australia/@-37.8236649,144.7997142,21z/data=!4m6!3m5!1s0x6ad661c5ebb05625:0xb41c0eb286ef944c!8m2!3d-37.8238638!4d144.8010218!16s%2Fg%2F11csfvbskm?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Riverside 255, San Francisco, USA
+                  5 Agosta Drive, Laverton North Victoria 3026
                 </a>
               </div>
             </div>
