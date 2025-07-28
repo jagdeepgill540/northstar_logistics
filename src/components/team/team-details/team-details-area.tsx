@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Location, Mail, PhoneTwo } from '@/components/svg';
-import ProgressItem from '@/components/progress/progress-item';
+// import ProgressItem from '@/components/progress/progress-item';
 import { ITeamDT } from '@/types/team-d-t';
 import detailsImg from '@/assets/img/team/details.jpg';
 
@@ -14,11 +14,12 @@ const TeamDetailsArea = ({ team }: TeamDetailsProps) => {
     name = 'Unknown Member',
     image = detailsImg,
     designation = 'No Designation',
+    description = 'No Description',
     phone = 'Not Available',
     email = 'Not Available',
     address = 'No Address',
     socials = [],
-    skills = [],
+    // skills = [],
   } = team || {};
 
   return (
@@ -81,7 +82,7 @@ const TeamDetailsArea = ({ team }: TeamDetailsProps) => {
                   data-ease="bounce"
                   data-delay=".5"
                 >
-                  <Link className="it-btn-orange" href="/contact-us">
+                  <Link className="it-btn-orange" href="/contact">
                     <span>Contact Us</span>
                   </Link>
                 </div>
@@ -92,25 +93,16 @@ const TeamDetailsArea = ({ team }: TeamDetailsProps) => {
                 <div className="it-team-details-right-title-box">
                   <h4 className="title">{name}</h4>
                   <span>{designation}</span>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                  <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum. officia deserunt mollit
-                    anim id est.
-                  </p>
+                  {/* <p> */}
+                  {description.split('\n').map((line, idx) => (
+                    <p key={idx}>
+                      {line}
+                      <br />
+                    </p>
+                  ))}
+                  {/* </p> */}
                 </div>
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-xl-6">
                     <div className="it-team-details-right-content it-team-details-right-title-box mb-40">
                       <h4>Career guideline</h4>
@@ -138,7 +130,7 @@ const TeamDetailsArea = ({ team }: TeamDetailsProps) => {
                       ))}
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

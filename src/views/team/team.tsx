@@ -24,7 +24,7 @@ const TeamMain = () => {
       <Header />
 
       <main>
-        <Breadcrumb title="Team" />
+        <Breadcrumb title="Team" backgroundImage="/assets/img/team/logistics-professional-overseeing-trucking-fleet.jpg" />
         <TeamArea />
       </main>
 

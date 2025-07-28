@@ -30,7 +30,7 @@ const TeamDetailsMain = ({ team }: TeamDetailsProps) => {
       <Header />
 
       <main>
-        <Breadcrumb title={team?.name} subtitle="Team Details" />
+        <Breadcrumb title={team?.name} subtitle="Team Details" backgroundImage="/assets/img/team/logistics-professional-overseeing-trucking-fleet.jpg" />
         <TeamDetailsArea team={team} />
         <TeamRelatedArea />
       </main>
