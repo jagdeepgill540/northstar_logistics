@@ -15,7 +15,7 @@ export const teamDataOne: ITeamDT[] = [
     image: teamImg1,
     phone: '(+61) 450 413 113',
     email: 'Northstarinfo@gmail.com',
-    address: '5 Agosta Drive, Laverton North Victoria 3026',
+    address: '73 Pipe Road, Laverton North VIC 3026',
     description: 'At Northstar Logistics, our mission is simple: to deliver freight safely, efficiently, and reliably—every time. As the Director, I’m proud to lead a team that’s committed to raising the bar in the Australian transport and logistics industry.\nWe understand that our customers rely on us not just to move goods, but to support their business goals and maintain their reputations.That’s why we’ve built our operations on a foundation of compliance, integrity, and innovation.Every journey we undertake is backed by strong systems, experienced people, and a culture that prioritizes safety and performance.\nFrom day one, my vision has been to create a company that partners with clients long- term, adapts to their needs, and exceeds expectations.Whether it’s local or interstate, we approach every load with professionalism and care—because we know what’s at stake.\nThank you for considering Northstar Logistics.We look forward to earning your trust.',
     socials: [
       // { platform: <Facebook />, link: 'https://facebook.com' },
@@ -40,7 +40,7 @@ export const teamDataOne: ITeamDT[] = [
     description: 'National Commercial Manager, Northstar Logistics Group pty ltd\nAt Northstar Logistics Group, our commitment is to delivering dependable, agile, and client-focused logistics solutions that meet the evolving demands of today’s supply chain. With over 7 years of experience in business development within the transport and logistics sector, I’ve seen firsthand how strong partnerships and smart strategy drive long-term success.\nIn my role as National Commercial Manager, I focus on building relationships that are grounded in trust, transparency, and performance. Every client we work with is different—and that’s exactly how we treat them. We take time to understand their unique needs and tailor our services to match, whether it’s local freight movements, national distribution, or complex supply chain coordination.\nNorthstar isn’t just a logistics provider—we’re a growth partner. Our team is agile, data-driven, and committed to continuous improvement. We take pride in not only meeting expectations, but consistently exceeding them.\nI look forward to continuing to lead Northstar into new markets and opportunities, and to helping our clients navigate their logistical challenges with confidence and clarity.',
     phone: '(+61) 450 413 113',
     email: 'Northstarinfo@gmail.com',
-    address: '5 Agosta Drive, Laverton North Victoria 3026',
+    address: '73 Pipe Road, Laverton North VIC 3026',
     socials: [
       // { platform: <Facebook />, link: 'https://facebook.com' },
       // { platform: <X />, link: 'https://x.com' },
@@ -64,7 +64,7 @@ export const teamDataOne: ITeamDT[] = [
     image: teamImg3,
     phone: '(+61) 450 413 113',
     email: 'Northstarinfo@gmail.com',
-    address: '5 Agosta Drive, Laverton North Victoria 3026',
+    address: '73 Pipe Road, Laverton North VIC 3026',
     socials: [
       // { platform: <Facebook />, link: 'https://facebook.com' },
       // { platform: <X />, link: 'https://x.com' },

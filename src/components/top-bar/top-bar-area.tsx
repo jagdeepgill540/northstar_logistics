@@ -12,7 +12,7 @@ const TopBarArea = () => {
                 <li className="d-none d-lg-inline-block">
                   <span>
                     <Phone />
-                    <a href="tel:0478800028">0478 800 028</a>
+                    <a href="tel:0391909911">03 9190 9911 </a>
                   </span>
                 </li>
                 <li>
@@ -28,9 +28,10 @@ const TopBarArea = () => {
                     <i className="fa-light fa-location-dot"></i>
                     <a
                       target="_blank"
-                      href="https://www.google.com/maps/place/5+Agosta+Dr,+Laverton+North+VIC+3026,+Australia/@-37.8238595,144.7984469,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad661c5ebb05625:0xb41c0eb286ef944c!8m2!3d-37.8238638!4d144.8010218!16s%2Fg%2F11csfvbskm?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
+                      href="https://www.google.com/maps/place/73+Pipe+Rd,+Laverton+North+VIC+3026,+Australia/@-37.8233733,144.8041288,330m/data=!3m1!1e3!4m6!3m5!1s0x6ad661c871fc77d3:0xac72826b6190786b!8m2!3d-37.8234371!4d144.8055284!16s%2Fg%2F11csk3gl0h?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
                     >
-                      5 Agosta Drive, Laverton North Victoria 3026.
+                      73 Pipe Road, Laverton North VIC 3026
+.
                     </a>
                   </span>
                 </li>

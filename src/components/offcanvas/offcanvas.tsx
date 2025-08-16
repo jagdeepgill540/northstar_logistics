@@ -98,7 +98,8 @@ const OffCanvas = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  5 Agosta Drive, Laverton North Victoria 3026
+                  73 Pipe Road, Laverton North VIC 3026
+
                 </a>
               </div>
             </div>
