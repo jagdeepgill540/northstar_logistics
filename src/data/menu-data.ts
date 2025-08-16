@@ -1,65 +1,65 @@
 import { IMenuDT } from '@/types/menu-d-t';
 
-import homeImg1 from '@/assets/img/menu/home-1.jpg';
+// import homeImg1 from '@/assets/img/menu/home-1.jpg';
 // import homeImg2 from '@/assets/img/menu/home-2.jpg';
 // import homeImg3 from '@/assets/img/menu/home-3.jpg';
 // import homeImg4 from '@/assets/img/menu/home-4.jpg';
 // import homeImg5 from '@/assets/img/menu/home-5.jpg';
 
-const homeMenuData: IMenuDT[] = [
-  {
-    id: 1,
-    title: 'Home',
-    link: '/',
-    home_menus: [
-      // {
-      //   title: 'Home 01',
-      //   link: '/',
-      //   img: homeImg1,
-      //   buttons: [
-      //     { label: 'Multi Page', href: '/' },
-      //     { label: 'One Page', href: '/home-one-page' },
-      //   ],
-      // },
-    //   {
-    //     title: 'Home 02',
-    //     link: '/home-2',
-    //     img: homeImg2,
-    //     buttons: [
-    //       { label: 'Multi Page', href: '/home-2' },
-    //       { label: 'One Page', href: '/home-2-one-page' },
-    //     ],
-    //   },
-    //   {
-    //     title: 'Home 03',
-    //     link: '/home-3',
-    //     img: homeImg3,
-    //     buttons: [
-    //       { label: 'Multi Page', href: '/home-3' },
-    //       { label: 'One Page', href: '/home-3-one-page' },
-    //     ],
-    //   },
-    //   {
-    //     title: 'Home 04',
-    //     link: '/home-4',
-    //     img: homeImg4,
-    //     buttons: [
-    //       { label: 'Multi Page', href: '/home-4' },
-    //       { label: 'One Page', href: '/home-4-one-page' },
-    //     ],
-    //   },
-    //   {
-    //     title: 'Home 05',
-    //     link: '/home-5',
-    //     img: homeImg5,
-    //     buttons: [
-    //       { label: 'Multi Page', href: '/home-5' },
-    //       { label: 'One Page', href: '/home-5-one-page' },
-    //     ],
-    //   },
-    ],
-  },
-];
+// const homeMenuData: IMenuDT[] = [
+//   {
+//     id: 1,
+//     title: 'Home',
+//     link: '/',
+//     home_menus: [
+//       // {
+//       //   title: 'Home 01',
+//       //   link: '/',
+//       //   img: homeImg1,
+//       //   buttons: [
+//       //     { label: 'Multi Page', href: '/' },
+//       //     { label: 'One Page', href: '/home-one-page' },
+//       //   ],
+//       // },
+//     //   {
+//     //     title: 'Home 02',
+//     //     link: '/home-2',
+//     //     img: homeImg2,
+//     //     buttons: [
+//     //       { label: 'Multi Page', href: '/home-2' },
+//     //       { label: 'One Page', href: '/home-2-one-page' },
+//     //     ],
+//     //   },
+//     //   {
+//     //     title: 'Home 03',
+//     //     link: '/home-3',
+//     //     img: homeImg3,
+//     //     buttons: [
+//     //       { label: 'Multi Page', href: '/home-3' },
+//     //       { label: 'One Page', href: '/home-3-one-page' },
+//     //     ],
+//     //   },
+//     //   {
+//     //     title: 'Home 04',
+//     //     link: '/home-4',
+//     //     img: homeImg4,
+//     //     buttons: [
+//     //       { label: 'Multi Page', href: '/home-4' },
+//     //       { label: 'One Page', href: '/home-4-one-page' },
+//     //     ],
+//     //   },
+//     //   {
+//     //     title: 'Home 05',
+//     //     link: '/home-5',
+//     //     img: homeImg5,
+//     //     buttons: [
+//     //       { label: 'Multi Page', href: '/home-5' },
+//     //       { label: 'One Page', href: '/home-5-one-page' },
+//     //     ],
+//     //   },
+//     ],
+//   },
+// ];
 
 export const menuData: IMenuDT[] = [
   // ...homeMenuData,

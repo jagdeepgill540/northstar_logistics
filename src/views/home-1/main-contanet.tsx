@@ -1,6 +1,6 @@
 import AboutOne from '@/components/about/about-one';
-import BlogOne from '@/components/blog/blog-one';
-import BrandOne from '@/components/brand/brand-one';
+// import BlogOne from '@/components/blog/blog-one';
+// import BrandOne from '@/components/brand/brand-one';
 import ChooseOne from '@/components/choose/choose-one';
 // import FunFactOne from '@/components/funfact/funfact-one';
 import HeroBannerOne from '@/components/hero/hero-banner/hero-banner-one';
