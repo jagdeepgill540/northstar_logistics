@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Copyright from '@/components/copyright/copyright';
 import FooterWidgetOne from '@/components/footer-widget/footer-widget-one';
 import FooterWidgetTwo from '@/components/footer-widget/footer-widget-two';
-import Newsletter from '@/components/newsletter/newsletter';
+// import Newsletter from '@/components/newsletter/newsletter';
 import FooterWidgetFour from '@/components/footer-widget/footer-widget-four';
 
 import shapeImg from '@/assets/img/shape/footer-1-1.png';
@@ -30,7 +30,7 @@ const FooterTwo = () => {
         />
 
         {/* Newsletter Area */}
-        <Newsletter />
+        {/* <Newsletter /> */}
         {/* Newsletter Area */}
 
         <div className="it-footer-area pt-140 mb-65">
